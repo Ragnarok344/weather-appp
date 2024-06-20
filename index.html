@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather app</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter the name of the city</h3>
+            <input type="text" id="city" placeholder="City Name">
+            <button id="search-btn">Search</button>
+            <div class="separate"></div>
+            
+            <div class="searchHistory"></div>
+            
+    </div>
+    <div class="weather-data">
+      <div class="current-weather">
+        <div class="details">
+            <h2 class="city">City Name</h2>
+           <div class="currenticon"></div>
+            <div class="currenttemp">Temperature</div>
+            <div class="currenthumid">Weather</div>
+            <div class="currentwind">High/Low</div>
+            
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="weather-side">
-                <div class="weather-gradient"></div>
-                <div class="date-time"></div>
-                <div class="date-container">
-                    <h2 class="date-dayname"></h2>
-                    <span class="date-day"></span>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span class="location"></span>
-                </div>
-                <div class="weather-container">
-                    <span class="weather-icon"></span>
-                    <h1 class="weather-temp"></h1>
-                    <h3 class="weather-desc"></h3>
-                </div>
-
-            </div>
-            <div class="info-side">
-                <div class="today-info-cont">
-                    <div class="today-info">
-                        <div class="humidity">
-                            <span class="title"></span>
-                            <span class="value"></span>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="wind">
-                            <span class="title"></span>
-                            <span class="value"></span>
-                            <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="week">
-                    <ul class="week-list">
-                        <li>
-                            <span class="name-day"></span>
-                            <span class="temp-day"></span>
-                            <span class="days-icon"></span>
-                        </li>
-                        <li>
-
-                            <span class="name-day"></span>
-                            <span class="temp-day"></span>
-                            <span class="days-icon"></span>
-
-                        </li>
-                        <li>
-
-                            <span class="name-day"></span>
-                            <span class="temp-day"></span>
-                            <span class="days-icon"></span>
-                        </li>
-                        <li>
-
-                            <span class="name-day"></span>
-                            <span class="temp-day"></span>
-                            <span class="days-icon"></span>
-                        </li>
-                        <li>
-
-                            <span class="name-day"></span>
-                            <span class="temp-day"></span>
-                            <span class="days-icon"></span>
-                        </li>
-                        <div class="clear"></div>
-                    </ul>
-                    <div class="location">
-                        <input type="text" class="location-input" id="city"
-                            value="North Carolina">
-                    </div>
-                </div>
-
-            </div>
         </div>
+      </div>
+      <div class="days-forcast">
+        <h2>5 Day Forecast</h2>
+        <ul class="weather-cards">
+            <li class="card">
+                <div class="dayone"></div>
+            <div class="forecasticon1"></div>
+            <div class="forecasttemp1">Temperature</div>
+            <div class="forecasthumid1">Weather</div>
+            <div class="forecastwind1">High/Low</div>
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script
-            <script src="assets/script.js"></script>
+            </li>
+            <li class="card">
+                <div class="day2"></div>
+                <div class="forecasticon2"></div>
+                <div class="forecasttemp2">Temperature</div>
+                <div class="forecasthumid2">Weather</div>
+                <div class="forecastwind2">High/Low</div>
+
+            </li>
+            <li class="card">
+                <div class="day3"></div>
+                <div class="forecasticon3"></div>
+                <div class="forecasttemp3">Temperature</div>
+                <div class="forecasthumid3">Weather</div>
+                <div class="forecastwind3">High/Low</div>
+
+            </li>
+            <li class="card">
+                <div class="day4"></div>
+                <div class="forecasticon4"></div>
+                <div class="forecasttemp4">Temperature</div>
+                <div class="forecasthumid4">Weather</div>
+                <div class="forecastwind4">High/Low</div>
+
+            </li>
+            <li class="card">
+                <div class="day5"></div>
+                <div class="forecasticon5"></div>
+                <div class="forecasttemp5">Temperature</div>
+                <div class="forecasthumid5">Weather</div>
+                <div class="forecastwind5">High/Low</div>
+
+            </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+<script src="assets/script.js"></script>
+
+</html>
