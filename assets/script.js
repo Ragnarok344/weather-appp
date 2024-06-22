@@ -33,7 +33,7 @@ for(let i = 0; i < historyArray.length; i++){
 
 
 function geoCode(city){
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=2&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=2&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => {
         //console.log(data)
@@ -61,7 +61,7 @@ function currentWeather(lat,lon){
         document.querySelector(".city").append(city)
 
         const icon = document.createElement("img")
-        icon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+        icon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
         document.querySelector(".currenticon").append(icon)
         const temp = document.createElement("h3")
         temp.textContent = "Temp: " + data.main.temp + "°F"
@@ -121,7 +121,7 @@ function forcastWeather(lat,lon){
         document.querySelector(".dayone").append(date)
 
         const icon = document.createElement("img")
-        icon.src = `http://openweathermap.org/img/w/${data.list[5].weather[0].icon}.png`
+        icon.src = `https://openweathermap.org/img/w/${data.list[5].weather[0].icon}.png`
         document.querySelector(".forecasticon1").append(icon)
 
         const temp = document.createElement("p")
@@ -144,7 +144,7 @@ function forcastWeather(lat,lon){
         document.querySelector(".day2").append(date2)
 
         const icon2 = document.createElement("img")
-        icon2.src = `http://openweathermap.org/img/w/${data.list[13].weather[0].icon}.png`
+        icon2.src = `https://openweathermap.org/img/w/${data.list[13].weather[0].icon}.png`
         document.querySelector(".forecasticon2").append(icon2)
 
         const temp2 = document.createElement("p")
@@ -164,7 +164,7 @@ function forcastWeather(lat,lon){
         document.querySelector(".day3").append(date3)
 
         const icon3 = document.createElement("img")
-        icon3.src = `http://openweathermap.org/img/w/${data.list[21].weather[0].icon}.png`
+        icon3.src = `https://openweathermap.org/img/w/${data.list[21].weather[0].icon}.png`
         document.querySelector(".forecasticon3").append(icon3)
 
         const temp3 = document.createElement("p")
@@ -185,7 +185,7 @@ function forcastWeather(lat,lon){
         document.querySelector(".day4").append(date4)
 
         const icon4 = document.createElement("img")
-        icon4.src = `http://openweathermap.org/img/w/${data.list[29].weather[0].icon}.png`
+        icon4.src = `https://openweathermap.org/img/w/${data.list[29].weather[0].icon}.png`
         document.querySelector(".forecasticon4").append(icon4)
 
         const temp4 = document.createElement("p")
@@ -205,7 +205,7 @@ function forcastWeather(lat,lon){
         document.querySelector(".day5").append(date5)
 
         const icon5 = document.createElement("img")
-        icon5.src = `http://openweathermap.org/img/w/${data.list[38].weather[0].icon}.png`
+        icon5.src = `https://openweathermap.org/img/w/${data.list[38].weather[0].icon}.png`
         document.querySelector(".forecasticon5").append(icon5)
 
         const temp5 = document.createElement("p")
